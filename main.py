@@ -4,6 +4,9 @@ from flask_restful import reqparse, abort, Api, Resource
 app = Flask(__name__)
 api = Api(app)
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 #parser = reqparse.RequestParser()
 #parser.add_argument('username', type=unicode, location='json')
 #parser.add_argument('password', type=unicode, location='json')
